@@ -419,6 +419,11 @@ body {
   margin: -1px;
 }
 
+.priorities-page {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
 .priorities-name {
   margin-bottom: 8px;
 }
@@ -552,11 +557,7 @@ body {
 */
 
 /*-------------------------------- our team----------------------- */
-.team {
-  padding-top: 96px;
-  padding-bottom: 96px;
-  background-color: var(--light);
-}
+
 .team-item {
   margin-bottom: 72px;
   font-size: 36px;
@@ -618,6 +619,11 @@ body {
   .team-titel:not(:last-child) {
     margin-bottom: 72px;
   }
+}
+.team {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-color: var(--light);
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-section {
