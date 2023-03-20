@@ -64,7 +64,6 @@ body {
 .container {
   padding-left: 16px;
   padding-right: 16px;
-  background-color: #81e7d8;
 }
 
 @media screen and (min-width: 428px) {
@@ -210,7 +209,6 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    background-color: #d9e99a;
   }
   .mobile-btn {
     display: none;
@@ -279,7 +277,6 @@ body {
     width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #e86993;
   }
   .header-page-connect {
     display: flex;
@@ -647,11 +644,11 @@ body {
 }
 
 /* =====================customers================ */
-
-/* .customers {
-  padding-top: 130px;
-  padding-bottom: 120px;
+.customers {
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
+
 .customers-title {
   margin-bottom: 72px;
   font-size: 36px;
@@ -661,12 +658,22 @@ body {
   text-transform: capitalize;
   color: var(--dark);
 }
-.customers-box {
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 767px) {
+  .customers-box {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 72px;
+  }
+  .customers-box-item {
+    width: calc((100% - 16px) / 2);
+  }
+  .customers-item {
+    width: 190px;
+  }
 }
+
 .customers-item {
-  width: 168px;
   height: 88px;
   display: flex;
   justify-content: center;
@@ -681,17 +688,40 @@ body {
   border: 1px solid var(--pressed-state);
   fill: var(--pressed-state);
 }
-
-.customers-box-item:not(:last-child) {
-  margin-right: 24px;
-} */
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .customers-box {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 72px;
+  }
+  .customers-box-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+}
+@media screen and (min-width: 1158px) {
+  .customers {
+    padding-top: 130px;
+    padding-bottom: 120px;
+  }
+  .customers-box {
+    display: flex;
+    justify-content: center;
+  }
+  .customers-box-item:not(:last-child) {
+    margin-right: 24px;
+  }
+  .customers-item {
+    width: 168px;
+  }
+}
 
 /*-------------------------footer------------------- */
 
-/* footer {
+footer {
   background-color: var(--dark);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .logo-footer {
@@ -712,16 +742,16 @@ body {
   width: 264px;
 }
 
-.footer-box {
+/* .footer-box {
   display: flex;
   align-items: baseline;
-}
+} */
 .footer-box-left-item {
   display: flex;
 }
-.footer-box-left {
+/* .footer-box-left {
   margin-left: 120px;
-}
+} */
 .footer-box-name {
   margin-bottom: 16px;
   font-weight: 500;
@@ -747,11 +777,19 @@ body {
 .footer-social:hover,
 .footer-social:focus {
   background-color: var(--success);
-} */
+}
+@media screen and (max-width: 767px) {
+  .footer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* ================================form=================== */
 /* .form-wrapper {
   margin-left: 80px;
-}
+} */
 
 .form-title {
   margin-bottom: 16px;
@@ -797,23 +835,23 @@ body {
 .form-btn:focus {
   background-color: var(--pressed-state);
 }
-.form {
+/* .form {
   display: flex;
   align-items: center;
 } */
+
 /*----------------------------- portfolio-------------------- */
 
 /* ==============header========= */
-
-/* .line {
+.line {
   border: 1px solid var(--accent);
   border-top: none;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-} */
+}
 
 /*---------------------------- our project-------------------- */
-/* .project {
+.project {
   padding-top: 96px;
   padding-bottom: 120px;
 }
@@ -892,9 +930,9 @@ body {
 .project-titel:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-} */
+}
 /* =======================overlay================== */
-/* .overlay {
+.overlay {
   position: absolute;
   left: 0;
   top: 0;
@@ -917,9 +955,9 @@ body {
 .project-titel:hover .overlay,
 .project-titel:focus .overlay {
   transform: translate(0, 0);
-} */
+}
 /* =================modal window====================== */
-/* .backdrop {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -969,10 +1007,10 @@ body {
   background-color: var(--pressed-state);
   fill: var(--main);
   border-color: transparent;
-} */
+}
 /* ==================modal-form==================== */
 
-/* .modal-title {
+.modal-title {
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -1131,4 +1169,4 @@ body {
   background-color: #404bbf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-} */
+}
