@@ -633,23 +633,21 @@ body {
     width: calc((100% - 24px) / 2);
   }
 }
-@media screen and (min-width:1158px) {
+@media screen and (min-width: 1158px) {
   .team {
-  padding-top: 120px;
-  padding-bottom: 110px;
+    padding-top: 120px;
+    padding-bottom: 110px;
+  }
+  .team-titel:not(:last-child) {
+    margin-right: 24px;
+  }
+  .team-section {
+    display: flex;
+  }
 }
-.team-titel:not(:last-child) {
-  margin-right: 24px;
-}
-.team-section {
-  display: flex;
-}
-
-
-
-
 
 /* =====================customers================ */
+
 /* .customers {
   padding-top: 130px;
   padding-bottom: 120px;
