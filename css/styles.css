@@ -420,20 +420,6 @@ line-height: 60px;
 
 
 /*---------------------top priorities ------------------ */
-/* 
-.priorities {
-  display: flex;
-}
-
-.page:not(:last-child) {
-  margin-right: 24px;
-}
-
-.priorities-page {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -447,21 +433,91 @@ line-height: 60px;
   margin: -1px;
 }
 
+ .priorities-name {
+    margin-bottom: 8px;
+  }
+
+@media screen and (max-width:767px) {
+     .page:not(last-child) {
+margin-bottom: 72px;
+  }
+}
 .priorities-name {
-  margin-bottom: 8px;
+  font-size: 36px;
+line-height: 1.11;
+text-align: center;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+color: var(--dark);
+}
+.priorities-item {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: var(--text);
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+  .priorities {
+    display: flex;
+    flex-wrap: wrap;
+   
+   
+  
+      }
+   .page {
+    width: calc((100%-24px)/2);
+
+      }
+       .page:nth-child(-n+2) {
+        margin-bottom: 72px;
+       }
+
+}
+@media screen and (min-width:1200px) {
+  .priorities {
+  display: flex;
+}
+
+.page:not(:last-child) {
+  margin-right: 24px;
+}
+.priorities-page {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.priorities-name {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--dark);
+}
+.page::before {
+  display: block;
+  content: "";
+  height: 112px;
+  margin-bottom: 8px;
+  background: var(--light);
+  border-radius: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page:nth-child(1)::before {
+  background-image: url(../images/section2/camila.jpg);
+}
+.page:nth-child(2)::before {
+  background-image: url(../images/section2/clock.png);
+}
+.page:nth-child(3)::before {
+  background-image: url(../images/section2/diagram.png);
+}
+.page:nth-child(4)::before {
+  background-image: url(../images/section2/astronaut.png);
+}
 }
 
-.priorities-item {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--text);
-} */
+
 /* ==================icon=========== */
 /* .page::before {
   display: block;
