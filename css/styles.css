@@ -126,7 +126,7 @@ height: 22px;
   top: 0;
   left: 0;
   width: 100%;
-  
+  height: 100%;
   max-height: 796x;
   padding: 80px 35px 40px 40px;
   background-color: #fff;
@@ -218,6 +218,9 @@ color:var(--text);
      background-color: #d9e99a;
   }
   .mobile-btn {
+    display: none;
+  }
+  .mobile-menu {
     display: none;
   }
    .header-page {
