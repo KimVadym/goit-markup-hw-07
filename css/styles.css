@@ -1027,6 +1027,7 @@ footer {
 }
 
 /* =======================overlay================== */
+
 .overlay {
   position: absolute;
   left: 0;
@@ -1051,7 +1052,9 @@ footer {
 .project-titel:focus .overlay {
   transform: translate(0, 0);
 }
+
 /* =================modal window====================== */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -1101,6 +1104,7 @@ footer {
   fill: var(--main);
   border-color: transparent;
 }
+
 /* ==================modal-form==================== */
 
 .modal-title {
