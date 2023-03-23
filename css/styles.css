@@ -117,7 +117,11 @@ header {
 }
 /* ============mobile menu=============== */
 @media screen and (max-height: 915px) {
+  .mobile-menu-list {
+    height: 700px;
+  }
 }
+
 @media screen and (max-width: 767px) {
   .mobile-menu {
     position: fixed;
@@ -176,7 +180,7 @@ header {
     margin-bottom: 40px;
   }
   .mobile-menu-list-wrapper {
-    margin-bottom: 284px;
+    margin-bottom: auto;
   }
   .mobile-connecting {
     margin-bottom: 48px;
@@ -203,6 +207,8 @@ header {
   }
   .mobile-soc {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: auto;
   }
   .mobile-soc-icon {
     width: 40px;
@@ -213,9 +219,9 @@ header {
     justify-content: center;
     align-items: center;
   }
-  .mobile-soc-item:not(:last-child) {
+  /* .mobile-soc-item:not(:last-child) {
     margin-right: 56px;
-  }
+  } */
   .mobile-soc-icon {
     display: flex;
     justify-content: center;
