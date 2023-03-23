@@ -116,11 +116,6 @@ header {
   stroke: #2e2f42;
 }
 /* ============mobile menu=============== */
-@media screen and (max-height: 915px) {
-  .mobile-menu-list {
-    height: 700px;
-  }
-}
 
 @media screen and (max-width: 767px) {
   .mobile-menu {
