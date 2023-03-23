@@ -61,18 +61,26 @@ body {
 
 /* --------------header------------- */
 /* ==============mobile================== */
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .container {
     width: 428px;
     margin-left: auto;
     margin-right: auto;
   }
+}
+header {
+  background-color: #d3e73d;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 
+@media screen and (max-width: 767px) {
   .header-page-menu {
     display: none;
   }
@@ -84,8 +92,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .accent {
   color: var(--primary-brand);
@@ -93,8 +99,7 @@ body {
 
 .logo {
   margin-right: 76px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -112,7 +117,8 @@ body {
   stroke: #2e2f42;
 }
 /* ============mobile menu=============== */
-
+@media screen and (max-height: 915px) {
+}
 @media screen and (max-width: 767px) {
   .mobile-menu {
     position: fixed;
@@ -120,7 +126,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    height: 796px;
     padding: 80px 35px 40px 40px;
     background-color: #fff;
     z-index: 1000;
@@ -129,6 +134,7 @@ body {
     pointer-events: none;
     transition: opacity var(--transinion-btn);
   }
+
   .mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
@@ -139,12 +145,16 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    width: 24px;
+    height: 24px;
     margin-top: 24px;
     margin-right: 24px;
-
     background: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .mobile-menu-item {
     font-weight: 700;
@@ -175,6 +185,7 @@ body {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--primary-brand);
+    text-decoration: none;
   }
   .mobile-menu-connect-mail {
     font-weight: 500;
@@ -182,6 +193,7 @@ body {
     line-height: 24px;
     letter-spacing: 0.02em;
     color: var(--text);
+    text-decoration: none;
   }
   .mobile-menu-connect:nth-child(1) {
     margin-bottom: 40px;
@@ -189,7 +201,7 @@ body {
   .mobile-soc {
     display: flex;
   }
-  .mobile-soc-item {
+  .mobile-soc-icon {
     width: 40px;
     height: 40px;
     background: var(--primary-brand);
@@ -201,15 +213,27 @@ body {
   .mobile-soc-item:not(:last-child) {
     margin-right: 56px;
   }
+  .mobile-soc-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color var(--transinion-btn);
+  }
+  .mobile-soc-icon:hover,
+  .mobile-soc-icon:focus {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: var(--pressed-state);
+  }
 }
 
 /* ==============mobile menu============ */
 /* ==============tablet============ */
 @media screen and (min-width: 768px) {
+  header {
+    padding-bottom: 12px;
+  }
   .container {
     width: 768px;
-    margin-left: auto;
-    margin-right: auto;
   }
   .mobile-btn {
     display: none;
@@ -236,10 +260,6 @@ body {
     margin-left: auto;
   }
 
-  .mail {
-    margin-right: 40px;
-  }
-
   .contacts {
     font-weight: 400;
     font-size: 16px;
@@ -255,8 +275,6 @@ body {
   }
   .page-navigation {
     position: relative;
-    padding-top: 24px;
-    padding-bottom: 24px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -274,20 +292,24 @@ body {
 /* ==================desktop================ */
 
 @media screen and (min-width: 1200px) {
+  header {
+    padding-bottom: 28px;
+  }
   .container {
     width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   .header-page-connect {
     display: flex;
     align-items: center;
   }
+  .mail {
+    margin-right: 40px;
+  }
 }
 /* ===============hero mobile============== */
 @media screen and (max-width: 767px) {
   .hero {
-    padding-top: 112px;
+    padding-top: 120px;
     padding-bottom: 112px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -296,7 +318,7 @@ body {
       url(../images/hero/mob1.jpg);
   }
   .hero-name {
-    width: 382px;
+    max-width: 320px;
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
@@ -361,7 +383,7 @@ body {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero/tab1.jpg);
+      url(../images/hero/tab2.jpg);
   }
   .hero-name {
     width: 496px;
@@ -384,7 +406,7 @@ body {
   .hero {
     padding-top: 188px;
     padding-bottom: 188px;
-    height: 600px;
+    /* height: 600px; */
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -430,7 +452,7 @@ body {
 
 /*---------------------top priorities ------------------ */
 @media screen and (max-width: 767px) {
-  .page:not(last-child) {
+  .page:not(:last-child) {
     margin-bottom: 72px;
   }
 }
@@ -477,6 +499,7 @@ body {
   .priorities {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 24px;
   }
   .page {
     width: calc((100% - 24px) / 2);
@@ -580,20 +603,29 @@ body {
 }
 
 /*-------------------------------- our team----------------------- */
-.team {
-  background-color: var(--light);
-}
 
 @media screen and (max-width: 767px) {
   .team {
-    background-color: var(--light);
     padding-top: 96px;
     padding-bottom: 128px;
+  }
+  .team-container {
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .team-page {
+    padding: 32px 14px;
   }
 
   .team-titel:not(:last-child) {
     margin-bottom: 72px;
   }
+}
+.team {
+  background-color: var(--light);
 }
 
 .team-item {
@@ -610,9 +642,6 @@ body {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
-}
-.team-page {
-  padding: 32px 16px;
 }
 
 .name {
@@ -656,8 +685,12 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .team {
-    padding-top: 96px;
-    padding-bottom: 104px;
+    padding: 96px 108px 104px;
+    /* padding-top: 96px;
+    padding-bottom: 104px; */
+  }
+  .team-page {
+    padding: 32px 16px;
   }
   .team-section {
     display: flex;
@@ -669,10 +702,14 @@ body {
     width: calc((100% - 24px) / 2);
   }
 }
+
 @media screen and (min-width: 1200px) {
   .team {
     padding-top: 120px;
     padding-bottom: 120px;
+  }
+  .team-page {
+    padding: 32px 16px;
   }
   .team-titel:not(:last-child) {
     margin-right: 24px;
@@ -684,19 +721,22 @@ body {
 
 /* =====================customers================ */
 @media screen and (max-width: 767px) {
-  .customers-box {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 16px;
-    row-gap: 72px;
-  }
   .customers-box-item {
     width: calc((100% - 16px) / 2);
   }
   .customers-item {
     width: 190px;
   }
+  .customers-box {
+    column-gap: 16px;
+  }
 }
+.customers-box {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 72px;
+}
+
 .customers {
   padding-top: 96px;
   padding-bottom: 96px;
@@ -728,30 +768,36 @@ body {
   fill: var(--pressed-state);
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .tab-container {
+    width: 552px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .customers-box {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 16px;
-    row-gap: 72px;
-  }
-  .customers-box-item {
-    flex-basis: calc((100% - 48px) / 3);
+    column-gap: 24px;
   }
 }
+.customers-item {
+  width: 168px;
+}
+
 @media screen and (min-width: 1200px) {
   .customers {
-    padding-top: 130px;
+    padding-top: 120px;
     padding-bottom: 120px;
   }
+
   .customers-box {
     display: flex;
     justify-content: center;
   }
   .customers-box-item:not(:last-child) {
     margin-right: 24px;
-  }
-  .customers-item {
-    width: 168px;
   }
 }
 
@@ -841,15 +887,20 @@ footer {
     padding-bottom: 96px;
   }
   .footer-box {
+    width: 552px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
+
     flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0;
   }
   .footer-wrapper-logo {
-    margin-left: 108px;
     margin-right: 24px;
   }
   .form-wrapper {
-    margin-left: 108px;
+    /* margin-left: 108px; */
   }
   .form {
     display: flex;
@@ -861,7 +912,7 @@ footer {
 @media screen and (min-width: 1200px) {
   footer {
     padding-top: 100px;
-    padding-bottom: 130px;
+    padding-bottom: 100px;
   }
   .footer-box {
     display: flex;
@@ -880,7 +931,6 @@ footer {
 }
 
 /* ================================form=================== */
-
 .form-title {
   margin-bottom: 16px;
   font-weight: 500;
@@ -935,6 +985,7 @@ footer {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
+*/
 
 /*---------------------------- our project-------------------- */
 
