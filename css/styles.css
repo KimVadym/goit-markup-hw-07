@@ -156,6 +156,11 @@ header {
     justify-content: center;
     align-items: center;
   }
+  .mobile-menu-list {
+    max-width: 352px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .mobile-menu-item {
     font-weight: 700;
     font-size: 36px;
