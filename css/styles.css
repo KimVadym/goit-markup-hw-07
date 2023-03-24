@@ -155,7 +155,7 @@ header {
     align-items: center;
   }
   .mobile-menu-list {
-    max-height: 796px;
+    max-height: 676px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
