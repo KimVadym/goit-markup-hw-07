@@ -157,6 +157,11 @@ header {
   .mobile-menu-list {
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-menu-list-wrapper {
+    min-height: 284px;
   }
   .mobile-menu-item {
     font-weight: 700;
@@ -175,9 +180,9 @@ header {
     margin-bottom: 40px;
   }
   .mobile-menu-list-wrapper {
-    margin-bottom: auto;
   }
   .mobile-connecting {
+    margin-top: auto;
     margin-bottom: 48px;
   }
   .mobile-menu-connect-tel {
@@ -203,7 +208,7 @@ header {
   .mobile-soc {
     display: flex;
     justify-content: space-between;
-    margin-bottom: auto;
+    margin-top: auto;
   }
   .mobile-soc-icon {
     width: 40px;
@@ -1155,6 +1160,7 @@ footer {
   background: var(--modal-overlay);
   z-index: 100;
   transition: opacity var(--transinion-btn), visibility var(--transinion-btn);
+  overflow-y: scroll;
 }
 .backdrop.is-hidden {
   opacity: 0;
