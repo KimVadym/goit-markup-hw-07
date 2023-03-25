@@ -443,7 +443,7 @@ header {
 .page-navigation::after {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -24px;
   content: "";
   display: block;
   width: 100%;
@@ -733,7 +733,7 @@ header {
     width: calc((100% - 16px) / 2);
   }
   .customers-item {
-    width: 190px;
+    /* width: 190px; */
   }
   .customers-box {
     column-gap: 16px;
@@ -789,9 +789,9 @@ header {
     flex-wrap: wrap;
     column-gap: 24px;
   }
-}
-.customers-item {
-  width: 168px;
+  .customers-box-item {
+    width: 168px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -806,6 +806,9 @@ header {
   }
   .customers-box-item:not(:last-child) {
     margin-right: 24px;
+  }
+  .customers-box-item {
+    width: 168px;
   }
 }
 
@@ -908,13 +911,11 @@ footer {
     margin-right: 24px;
   }
   .form-wrapper {
+    padding-top: 72px;
     /* margin-left: 108px; */
   }
   .form {
     display: flex;
-  }
-  .form-title {
-    margin-top: 72px;
   }
 }
 @media screen and (min-width: 1200px) {
