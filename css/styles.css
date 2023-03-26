@@ -452,7 +452,8 @@ header {
 .page-navigation::after {
   position: absolute;
   left: 0;
-  bottom: -24px;
+  bottom: 0;
+  margin-bottom: -28px;
   content: "";
   display: block;
   width: 100%;
@@ -465,6 +466,11 @@ header {
 
 .current::after {
   opacity: 1;
+}
+@media screen and (max-width: 1199px) {
+  .page-navigation::after {
+    margin-bottom: -24px;
+  }
 }
 
 /*---------------------top priorities ------------------ */
